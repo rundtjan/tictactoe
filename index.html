@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic tac toe</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <div ng-app="tictac" ng-controller="myCtrl">
+      <div class="board">
+        <div class="menu" id="title">Tic Tac Toe</div>
+        <div class="menu" id="players" ng-click="changeplayer()">
+          Click to switch:<br><span style="color:grey"> {{ display('mach') }}</span>
+        </div>
+        <div class="menu" id="scores">
+          {{ display('player1')}}: <span style="color:grey">{{scoresplayer1}} points</span><br>
+          {{ display('player2')}}: <span style="color:grey">{{scoresplayer2}} points</span></div>
+        <div class="menu" id="changer">{{ display('plays')}}<br>
+          <div class="button" ng-style="button2" ng-click="changer('o')">O</div>
+          <div class="button" ng-style="button1" ng-click="changer('x')">X</div></div>
+        <div class="menu" id="level" ng-style="levelstyle">Choose level: <br>
+        <div class="button1" ng-style="level1" ng-click="levelchanger('easy')">Easy</div>
+          <div class="button1" ng-style="level2" ng-click="levelchanger('medium')">Medium</div>
+        <div class="button1" ng-style="level3" ng-click="levelchanger('hard')">Hard</div></div>
+        <div class="menu" id="start" ng-click="enter()">{{ display('start')}}</div>
+        <div class="menuish" id="turn">{{ display('turn') }}</div>
+      <div class="xo" id="a" ng-style="xo.a" ng-click="mark('a')">
+      {{ display('a') }}
+    </div>
+      <div class="xo" id="b" ng-style="xo.b" ng-click="mark('b')">
+      {{ display('b')}}
+    </div>
+      <div class="xo" id="c" ng-style="xo.c" ng-click="mark('c')">
+      {{ display('c')}}
+    </div>
+      <div class="xo" id="d" ng-style="xo.d" ng-click="mark('d')">
+      {{ display('d')}}
+    </div>
+      
+      <div class="xo" id="f" ng-style="xo.f" ng-click="mark('f')">
+      {{ display('f')}}
+    </div><br>
+      <div class="xo" id="g" ng-style="xo.g" ng-click="mark('g')">
+      {{ display('g')}}
+    </div>
+      <div class="xo" id="h" ng-style="xo.h" ng-click="mark('h')">
+      {{ display('h')}}
+    </div>
+      <div class="xo" id="i" ng-style="xo.i" ng-click="mark('i')">
+      {{ display('i')}}
+    </div>
+        <div class="xo" id="e" ng-style="xo.e" ng-click="mark('e')">
+      {{ display('e')}}
+    </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="code.js"></script>
+  </body>
+</html>
