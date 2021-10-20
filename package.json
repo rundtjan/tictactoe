@@ -1,5 +1,5 @@
 {
-    "name": "Tic tac toe",
+    "name": "Tictactoe",
     "version": "1.0.0",
     "description": "a game coded in angular javascript",
     "scripts": {
